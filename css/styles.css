@@ -1,0 +1,593 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#faf7f2;
+    
+    font-family:'Poppins',sans-serif;
+
+    color:#4A342E;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:450px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.logo{
+
+    width:220px;
+
+    margin-bottom:25px;
+
+}
+
+h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:42px;
+
+}
+
+.subtitulo{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    background:#6F4E37;
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+}
+
+.beneficios{
+
+    margin-top:45px;
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    margin:12px 0;
+
+}
+.catalogo{
+    margin-top:40px;
+    display:grid;
+    gap:25px;
+}
+
+.producto{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    padding:20px;
+
+}
+
+.producto:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.imagenProducto{
+    width:100%;
+    margin-bottom:15px;
+}
+
+.imagenProducto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.producto h2{
+    margin-bottom:10px;
+}
+
+.producto p{
+    font-size:15px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.producto h3{
+    color:#6F4E37;
+    margin-bottom:20px;
+}
+
+.agregarBtn{
+
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#7A4A27;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.agregarBtn:hover{
+
+    background:#5A341C;
+    transform:translateY(-2px);
+
+}
+
+.agregarBtn:hover{
+
+    background:#6F4E37;
+
+}
+
+.header{
+    position:fixed;
+    top:20px;
+    right:25px;
+    z-index:1000;
+}
+
+.carrito{
+    position:relative;
+    font-size:35px;
+    cursor:pointer;
+}
+
+#contador{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:#d62828;
+    color:#fff;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+}
+.panelCarrito{
+
+    position:fixed;
+
+    top:0;
+
+    right:-400px;
+
+    width:350px;
+
+    height:100vh;
+
+    background:white;
+
+    box-shadow:-5px 0 20px rgba(0,0,0,.2);
+
+    transition:.4s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    z-index:999;
+
+}
+
+.panelCarrito.abierto{
+
+    right:0;
+
+}
+
+.panelHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.panelFooter{
+
+    margin-top:auto;
+
+    padding:20px;
+
+    border-top:1px solid #ddd;
+
+}
+
+#listaCarrito{
+
+    padding:20px;
+
+    overflow:auto;
+
+}
+.itemCarrito{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+}
+
+.itemCarrito span{
+    color:#4A342E;
+}
+
+.itemCarrito strong{
+    color:#6F4E37;
+}
+
+.controlesCantidad{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+.controlesCantidad button{
+
+    width:32px;
+
+    height:32px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#6F4E37;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.controlesCantidad span{
+
+    font-weight:bold;
+
+    width:20px;
+
+    text-align:center;
+
+}
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.logo{
+    width:170px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:2.6rem;
+    color:#5A3825;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    max-width:500px;
+    margin:0 auto 30px;
+    color:#666;
+    line-height:1.6;
+    font-size:1.05rem;
+}
+
+#catalogoBtn{
+
+    background:#6F4E37;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#catalogoBtn:hover{
+
+    transform:translateY(-3px);
+
+    background:#5A3825;
+
+}
+/* TOAST */
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(100px);
+
+    background:#6F4E37;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:9999;
+
+    font-weight:bold;
+
+}
+
+.toast.mostrar{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+.formulario{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:20px;
+
+}
+
+.formulario input{
+
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:15px;
+
+}
+
+.oculto{
+
+    display:none;
+
+}
+
+#enviarWhatsapp{
+
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+#enviarWhatsapp:hover{
+
+    background:#1ebe5d;
+
+}
+.precio{
+    color:#8B4513;
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+.imagenProducto{
+
+    overflow:hidden;
+    border-radius:15px;
+
+}
+
+.imagenProducto img{
+
+    width:100%;
+    transition:.4s;
+
+}
+
+.producto:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .header{
+
+        padding:15px;
+
+    }
+
+    .logoHeader img{
+
+        width:90px;
+
+    }
+
+    .hero{
+
+        padding:30px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .catalogo{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .producto{
+
+        width:100%;
+
+    }
+
+    .panelCarrito{
+
+        width:100%;
+
+    }
+
+}
+
+.logoHero{
+
+    width:170px;
+
+    margin-bottom:20px;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+    color:#6b3f22;
+
+    margin-bottom:10px;
+
+}
+
+.hero p{
+
+    color:#666;
+
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:1.6;
+
+}
