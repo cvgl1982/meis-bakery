@@ -32,6 +32,6 @@ const productos = [
     nombre: "Red Velvet",
     descripcion: "Cookie Red Velvet con un delicioso toque de cacao.",
     precio: 1.50,
-    imagen: "assets/cookies/RedVelvet.jpg"
+    imagen: "assets/cookies/Redvelvet.jpg"
   }
 ];
